@@ -4,11 +4,13 @@ from flask import request
 app = Flask(__name__)
 
 
+#http://127.0.0.1:5000/licz/23/32
 @app.route("/licz/<int:a>/<int:b>")
 def dodawanie(a, b):
     return f"{a} + {b} = {a+b}"
 
 
+#http://127.0.0.1:5000/licz?a=4&b=8
 @app.route("/licz")
 def dodawanie_query():
     try:
